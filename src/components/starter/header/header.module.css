@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.961);
+}
+
+.logo {
+  display: inline-block;
+}
+.logo a {
+  display: block;
+}
+
+.header .nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.header li {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+}
+
+.header li a {
+  color: white;
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+
+.header li a:hover {
+  /* color: var(--qwik-light-blue); */
+  color: beige;
+}
+
+@media (min-width: 450px) {
+  .header li {
+    display: inline-block;
+  }
+}
