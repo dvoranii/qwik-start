@@ -27,11 +27,8 @@ export default component$(() => {
               </a>
             </li>
             <li>
-              <a
-                href="https://qwik.builder.io/tutorial/welcome/overview/"
-                target="_blank"
-              >
-                Tutorials
+              <a href="/contact" target="_blank">
+                Contact
               </a>
             </li>
           </ul>
