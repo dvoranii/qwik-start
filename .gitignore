@@ -2,8 +2,6 @@
 /dist
 /lib
 /lib-types
-/server
-/firebase
 
 # Development
 node_modules
@@ -42,3 +40,5 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+
+.vercel
