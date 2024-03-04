@@ -1,12 +1,19 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./contact.module.css";
-import { routeAction$, Form, type DocumentHead } from "@builder.io/qwik-city";
+import { routeAction$, Form, type DocumentHead, zod$, z } from "@builder.io/qwik-city";
 
-export const useHandleSubmmit = routeAction$(async (formData) => {
-  console.log(formData.name);
-  console.log(formData.email);
-  console.log(formData.message);
-});
+export const useHandleSubmmit = routeAction$(
+  async (formData) => {
+    console.log(formData.name);
+    console.log(formData.email);
+    console.log(formData.message);
+  },
+  zod$({
+    name: z.string(),
+    email: z.string(),
+    message: z.string()
+  })
+);
 
 export default component$(() => {
 
