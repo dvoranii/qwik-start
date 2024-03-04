@@ -3,10 +3,13 @@
 /lib
 /lib-types
 /server
+/firebase
 
 # Development
 node_modules
 *.local
+.env
+qwik-form-firebase-adminsdk-6xhps-41fd689e86.json
 
 # Cache
 .cache

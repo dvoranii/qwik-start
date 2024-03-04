@@ -1,6 +1,7 @@
 **/*.log
 **/.DS_Store
 *.
+/firebase/
 .vscode/settings.json
 .history
 .yarn
