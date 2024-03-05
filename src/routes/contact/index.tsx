@@ -7,12 +7,14 @@ import {
   zod$,
   z,
 } from "@builder.io/qwik-city";
+import { submitContactForm } from "../../utils/apiService";
 
 export const useHandleSubmit = routeAction$(
   async (formData) => {
-    console.log(formData.name);
-    console.log(formData.email);
-    console.log(formData.message);
+    const backendUrl = "https://fierce-sierra-79845-0600c6f00c42.herokuapp.com";
+    const result = await submitContactForm(formData, backendUrl);
+
+    console.log(result.message);
   },
   zod$({
     name: z.string(),
