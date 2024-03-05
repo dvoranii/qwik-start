@@ -8,12 +8,10 @@ import {
   z,
 } from "@builder.io/qwik-city";
 import { submitContactForm } from "../../utils/apiService";
-import dotenv from "dotenv";
-dotenv.config();
 
 export const useHandleSubmit = routeAction$(
   async (formData) => {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const backendUrl = "https://fierce-sierra-79845-0600c6f00c42.herokuapp.com";
     const result = await submitContactForm(formData, backendUrl);
 
     console.log(result.message);
