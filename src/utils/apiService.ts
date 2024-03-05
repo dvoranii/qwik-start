@@ -7,8 +7,6 @@ export async function submitContactForm(formData: any, backendUrl: string) {
       },
       body: JSON.stringify(formData),
     });
-
-    // Check if the response is ok and content-type is json before parsing
     if (
       response.ok &&
       response.headers.get("content-type")?.includes("application/json")
@@ -16,7 +14,6 @@ export async function submitContactForm(formData: any, backendUrl: string) {
       const data = await response.json();
       return { success: true, message: data.message };
     } else {
-      // Attempt to read text response instead of JSON
       const message = await response.text();
       return {
         success: false,
